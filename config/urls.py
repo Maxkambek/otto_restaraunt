@@ -22,9 +22,9 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
-admin.site.index_title = 'OlBer'
-admin.site.site_header = _('OlBer Administration')
-admin.site.site_title = 'OlBer'
+admin.site.index_title = 'Otto'
+admin.site.site_header = _('Otto Administration')
+admin.site.site_title = 'Otto'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

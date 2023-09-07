@@ -10,6 +10,7 @@ class Category(models.Model):
     order = models.IntegerField(default=0)
     parent_group = models.CharField(max_length=123, null=True, blank=True)
     isIncludedInMenu = models.BooleanField(default=False)
+    isDeleted = models.BooleanField(default=False)
     isGroupModifier = models.BooleanField(default=False)
 
     def __str__(self):
@@ -23,6 +24,11 @@ class Product(models.Model):
     type = models.CharField(max_length=123, null=True, blank=True)
     parentGroup = models.CharField(max_length=123, null=True, blank=True)
     name = models.CharField(max_length=333, null=True, blank=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    price = models.FloatField(null=True, blank=True)
+    isDeleted = models.BooleanField(default=False)
+    measureUnit = models.CharField(max_length=123, null=True, blank=True)
+    order = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
